@@ -1,0 +1,125 @@
+
+<HTML>
+<HEAD>
+<title>Learning Single-Image Depth from Videos using QANets</title>
+<link rel="stylesheet" href="../jemdoc.css" type="text/css">
+</HEAD>
+<BODY>
+<center>
+<h1>Learning Single-Image Depth from Videos using <br> Quality Assessment Networks</h1>
+<h3>Weifeng Chen, Shengyi Qian, Jia Deng</h3>
+
+<p>
+
+<img src="teaser.png" width=700px><br>
+
+
+
+
+
+
+
+<p>
+<br>
+<table width="80%">
+<tr><td align="justify">
+<p>
+<b>Figure 1</b>: An overview of our data collection method. Given an arbitrary video, we follow standard steps of structure-from-motion: extracting feature points and matching them across frames, estimating the camera parameters, and performing triangulation to obtain a reconstruction. A Quality Assessment Network (QANet) examines the operation of the SfM pipeline and assigns a score to the reconstruction. If the score is above a certain threshold, this reconstruction is deemed of high quality, and we use it as single-view depth training data. Otherwise, the reconstruction is discarded.
+<br>
+
+
+<h2>Abstract</h2>
+Depth estimation from a single image in the wild remains 
+a challenging problem. One main obstacle is the
+lack of high-quality training data for images in the wild. In
+this paper we propose a method to automatically generate
+such data through Structure-from-Motion (SfM) on Internet
+videos. The core of this method is a Quality Assessment Network
+that identifies high-quality reconstructions obtained
+from SfM. Using this method, we collect single-view depth
+training data from a large number of YouTube videos and
+construct a new dataset called YouTube3D. Experiments
+show that YouTube3D is useful in training depth estimation
+networks and advances the state of the art of single-view
+depth estimation in the wild.
+
+
+<h2>Publication</h2>
+
+    
+<table>
+  <tbody>
+    <tr>
+      <td width="50">
+        <a href="https://arxiv.org/abs/1806.09573">
+        <img src="thumbnail.png" border="0" width="100">
+        </a>
+      </td>
+
+      <td>  
+        <h3><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Learning_Single-Image_Depth_From_Videos_Using_Quality_Assessment_Networks_CVPR_2019_paper.pdf"></a></h3>      
+        <p>   
+          <b>Learning Single-Image Depth from Videos using Quality Assessment Networks</b>,<br>
+          Weifeng Chen, Shengyi Qian, Jia Deng<br>
+          <em>Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2019.<br> </em>
+          [<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Learning_Single-Image_Depth_From_Videos_Using_Quality_Assessment_Networks_CVPR_2019_paper.pdf">paper</a>]
+        </p>
+      </td>     
+    </tr>     
+  </tbody>
+</table>
+
+
+
+
+<h2>Qualitative Results</h2>
+<img src="qual_results_DIW_ResNet.jpg" width=800px><br>
+<p>
+<br>
+<table width="100%">
+<tr><td align="justify">
+<p>
+<b>Figure 2</b>: Qualitative results on the DIW [1] test set by the state-of-the-art network EncDecResNet [2] trained on ImageNet + ReDWeb [2] + DIW [1] + YouTube3D.
+<br>
+
+
+<tr><td align="left">
+
+<tr><td align="left">
+
+
+
+<h2>Dataset</h2>
+Download [<a href="https://pvl-weifengc.cs.princeton.edu/YT3D/data_records.tar.gz">Records</a>][<a href="https://pvl-weifengc.cs.princeton.edu/YT3D/YT3D.tar.gz">Image Data (64 GB)</a>]
+
+
+
+<br>
+<br>
+
+<h2>Code</h2>
+Code for training and evaluation. [<a href="https://github.com/princeton-vl/YouTube3D">link</a>]
+
+
+
+
+<h2>Reference</h2>
+[1] Chen, Weifeng, Zhao Fu, Dawei Yang, and Jia Deng. "Single-image depth perception in the wild." In Advances in Neural Information Processing Systems, pp. 730-738. 2016. 
+<br>
+[2] Xian, Ke, Chunhua Shen, Zhiguo Cao, Hao Lu, Yang Xiao, Ruibo Li, and Zhenbo Luo. "Monocular Relative Depth Perception With Web Stereo Data Supervision." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 311-320. 2018.
+
+
+
+<br>
+<br>
+<tr><td align="left">
+<h3>CONTACT</h3>
+
+Please send any questions or comments to Weifeng Chen at <a href="mailto:wfchen@umich.edu">wfchen@umich.edu</a>.
+
+</table>
+</center>
+
+
+
+</BODY>
